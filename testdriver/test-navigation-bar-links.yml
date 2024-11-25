@@ -1,0 +1,35 @@
+version: 4.1.27
+steps:
+  - prompt: Open the homepage.
+    commands:
+      - command: hover-text
+        text: pubnub.com
+        description: address bar with the current URL
+        action: click
+      - command: press-keys
+        keys:
+          - enter
+  - prompt: >-
+      Click on each link in the navigation bar  # Use the content of the file
+      from the environment
+    commands:
+      - command: hover-text
+        text: Products
+        description: navigation link for Products
+        action: click
+      - command: hover-text
+        text: Solutions
+        description: navigation link for Solutions
+        action: click
+      - command: hover-text
+        text: Pricing
+        description: navigation link for Pricing
+        action: click
+      - command: hover-text
+        text: Developers
+        description: navigation link for Developers
+        action: click
+      - command: hover-text
+        text: Resources
+        description: navigation link for Resources
+        action: click
