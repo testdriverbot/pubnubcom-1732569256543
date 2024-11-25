@@ -1,0 +1,20 @@
+version: 4.1.27
+steps:
+  - prompt: Open the homepage.
+    commands:
+      - command: hover-text
+        text: pubnub.com
+        description: address bar in the browser
+        action: click
+      - command: type
+        text: https://www.example.com
+      - command: press-keys
+        keys:
+          - enter
+      - command: scroll
+        direction: down
+  - prompt: Click on the "Contact Sales" link in the header.
+    commands:
+      - command: scroll-until-text
+        text: Contact Sales
+        direction: down
