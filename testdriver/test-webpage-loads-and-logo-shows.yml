@@ -1,0 +1,23 @@
+version: 4.1.27
+steps:
+  - prompt: Open the browser and navigate to the homepage.
+    commands:
+      - command: press-keys
+        keys:
+          - control
+          - l
+      - command: type
+        text: https://www.pubnub.com
+      - command: press-keys
+        keys:
+          - enter
+  - prompt: Assert that the webpage loads successfully.
+    commands:
+      - command: assert
+        expect: The complete real-time developer platform is visible
+  - prompt: >-
+      Assert that the PubNub logo is visible.  # Use the content of the file
+      from the environment
+    commands:
+      - command: assert
+        expect: PubNub logo is visible in the header
